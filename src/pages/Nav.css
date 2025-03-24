@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +12,8 @@ html {
 body {
   background-color: #F1F8E8;
   font-family: 'Poppins', sans-serif;
-  /* padding-top: 10rem;  */
 }
 
-/* Typography */
 h1 {
   font-weight: 700;
 }
@@ -28,35 +26,10 @@ li {
   list-style: none;
 }
 
-/* Logo */
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.logo span {
-  font-size: 2rem;
-  color: #000000;
-  font-weight: 700;
-}
-
-.logo img {
-  width: 5rem;
-  height: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .logo span {
-    font-size: 2.5rem;
-  }
-}
-
-/* Links */
 a {
   text-decoration: none;
   color: #0e264f;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a:hover {
@@ -64,7 +37,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Buttons */
 button {
   cursor: pointer;
   border: none;
@@ -74,13 +46,15 @@ button {
 
 /* Header */
 header {
-  position: sticky;  /* Or `fixed` if you want it to always stick */
+  position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   width: 100%;
+  height: 10rem;
 }
+
 .container {
   max-width: 132rem;
   margin: 0 auto;
@@ -91,44 +65,84 @@ header {
   justify-content: space-between;
 }
 
-/* Navbar Flex */
+/* Logo */
+.logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.logo img {
+  width: 5rem;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo span {
+    font-size: 2.5rem;
+  }
+}
+
+/* Navbar Grid */
 .navbar-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* margin-right: 15rem; */
 }
+
 /* Nav Menu */
-nav ul {
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-wrapper ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   align-items: center;
   gap: 5rem;
 }
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    right: 0;
-    display: none; /* Default: hidden */
-  }
 
-  nav ul.active {
-    display: flex; /* Show on hamburger click */
-  }
-
-  .ham-menu {
-    display: block;
-  }
-}
-nav ul li {
+.nav-wrapper li {
   position: relative;
   color: #0e264f;
-  font-family: Poppins, sans-serif;
+}
+
+/* Link Sizes */
+.nav-wrapper a,
+.web-content-link {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0e264f;
+  }
 }
 
 /* Dropdown */
@@ -152,14 +166,13 @@ nav ul li {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
   border-radius: 5px;
-  width: max-content;
   padding: 0;
   display: none;
   z-index: 1000;
 }
 
 .dropdown li {
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -173,48 +186,20 @@ nav ul li {
   background-color: #f0f0f0;
 }
 
+.web-content-menu:hover .dropdown,
 .show-dropdown {
-  display: block !important;
-}
-
-.web-content-menu:hover .dropdown {
   display: block;
 }
 
-/* Mobile Menu */
+/* Hamburger Menu */
 .ham-menu {
   display: none;
 }
 
-.menu-mobile {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  background-color: #fff;
-  width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
-  padding: 2rem 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-mobile ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-}
-
-.menu-mobile ul li {
-  padding: 1.5rem;
-}
-
-/* Responsive */
-@media screen and (max-width: 998px) {
+/* Mobile Styles */
+@media (max-width: 998px) {
   .menu-web {
     display: none;
-    background-color: #55AD9B;
   }
 
   .ham-menu {
@@ -224,36 +209,39 @@ nav ul li {
 
   .menu-mobile {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 0;
+    z-index: 999;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .menu-mobile ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    width: 40rem;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .menu-mobile ul li {
+    padding: 1.5rem;
   }
 }
-
-/* Navbar Link Sizes */
-nav ul li a,
-.web-content-link {
-  font-size: 1.5rem;
-}
-
-@media screen and (min-width: 600px) {
-  nav ul li a,
-  .web-content-link {
-    font-size: 1.6rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  nav ul li a,
-  .web-content-link {
-    font-size: 1.8rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  nav ul li a,
-  .web-content-link {
-    font-size: 1.5rem;
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
-  color:#0E264F;
-  }
+.book-appointment-btn{
+  background: linear-gradient(135deg, #4f9dff, #1e40af); /* light blue to dark */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }

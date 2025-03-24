@@ -8,25 +8,25 @@ const mainMenuItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/services", label: "Services" },
-  { to: "/doctors-list", label: "Doctors List" },
   { to: "/contact-us", label: "Contact Us" },
-  { to: "/find-a-doctor", label: "Find a Doctor" }
-];
-
-// Dropdown menu items
-const dropdownMenuItems = [
-  { to: "/faqs", label: "FAQs" },
+  { to: "/find-a-doctor", label: "Find a Doctor" },
   { to: "/booking", label: "Book an Appointment" }
 ];
 
+// Dropdown menu items
+// const dropdownMenuItems = [
+//   { to: "/faqs", label: "FAQs" },
+//   { to: "/booking", label: "Book an Appointment" }
+// ];
+
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
 
   // Close menu & dropdown after clicking a link
   const handleNavLinkClick = () => {
     setShowMenu(false);
-    setShowDropdown(false);
+    // setShowDropdown(false);
   };
 
   return (
@@ -44,31 +44,39 @@ export default function NavBar() {
           >
             <ul>
               {mainMenuItems.map((item, index) => (
-                <li key={index} onClick={handleNavLinkClick}>
-                  <NavLink to={item.to}>{item.label}</NavLink>
-                </li>
+               <li key={index} onClick={handleNavLinkClick}>
+               {item.label === "Book an Appointment" ? (
+                 <NavLink to={item.to}>
+                   <button className="book-appointment-btn">{item.label}</button>
+                 </NavLink>
+               ) : (
+                 <NavLink to={item.to}>{item.label}</NavLink>
+               )}
+             </li>
+             
               ))}
 
               {/* Dropdown Menu */}
-              <li className="web-content-menu">
+              {/* <li className="web-content-menu">
                 <button
                   className="web-content-link"
                   onClick={() => setShowDropdown(!showDropdown)}
                 >
                   <span>Pages</span>
-                </button>
-
+                </button> */}
+               
                 {/* Dropdown Items */}
-                {showDropdown && (
+                {/* {showDropdown && (
                   <ul className="dropdown">
                     {dropdownMenuItems.map((item, index) => (
                       <li key={index} onClick={handleNavLinkClick}>
                         <NavLink to={item.to}>{item.label}</NavLink>
                       </li>
+                      
                     ))}
                   </ul>
                 )}
-              </li>
+              </li> */}
             </ul>
           </nav>
 
