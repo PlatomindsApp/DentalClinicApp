@@ -1,30 +1,188 @@
+/* ✅ Background Container */
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Dynamic height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ✅ Background Image */
 .background-img {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full screen height */
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Overlay Content (Text & Button) */
+.overlay-content {
+  position: absolute;
+  text-align: center;
+  color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transform: translateY(10%); /* Adjusted for better alignment */
+}
+
+/* ✅ Hero Text - Fully Responsive */
+.hero-text {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Contact Us Button */
+.contact-us-btn {
+  padding: 12px 24px;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4f9dff, #1e40af);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-us-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive Adjustments */
+@media (min-width: 1025px) {
+  .overlay-content {
+    transform: translateY(15%);
   }
-  
-  .background-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .overlay-content {
+    transform: translateY(10%);
   }
-  
-  /* Text overlay styling */
-  .background-img span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-    font-size: 2.4rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.4); /* Optional: dark background for readability */
-    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .overlay-content {
+    transform: translateY(5%);
   }
-  
+
+  .hero-text {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .contact-us-btn {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-content {
+    transform: translateY(0%);
+  }
+
+  .hero-text {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .contact-us-btn {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ✅ Text Section */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  text-align: center;
+  background-color: #f1f8e8;
+}
+
+/* ✅ Heading */
+h1 {
+  font-size: 4rem;
+  color: #3660D9;
+  margin-bottom: 1rem;
+}
+
+/* ✅ Paragraph */
+p {
+  font-size: 1.8rem;
+  color: #333;
+  max-width: 60%;
+}
+
+/* ✅ Responsive Text Adjustments */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+
+/* ✅ Services Section (Grid) */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* ✅ Card Styling */
+.card {
+  background-color: #4f9dff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ✅ Special Card */
+.div13 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 2;
+  background-color: #1e40af;
+}
