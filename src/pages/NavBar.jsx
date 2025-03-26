@@ -13,20 +13,12 @@ const mainMenuItems = [
   { to: "/booking", label: "Book an Appointment" }
 ];
 
-// Dropdown menu items
-// const dropdownMenuItems = [
-//   { to: "/faqs", label: "FAQs" },
-//   { to: "/booking", label: "Book an Appointment" }
-// ];
-
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-  // const [showDropdown, setShowDropdown] = useState(false);
 
-  // Close menu & dropdown after clicking a link
+// Close menu & dropdown after clicking a link
   const handleNavLinkClick = () => {
     setShowMenu(false);
-    // setShowDropdown(false);
   };
 
   return (
@@ -56,27 +48,6 @@ export default function NavBar() {
              
               ))}
 
-              {/* Dropdown Menu */}
-              {/* <li className="web-content-menu">
-                <button
-                  className="web-content-link"
-                  onClick={() => setShowDropdown(!showDropdown)}
-                >
-                  <span>Pages</span>
-                </button> */}
-               
-                {/* Dropdown Items */}
-                {/* {showDropdown && (
-                  <ul className="dropdown">
-                    {dropdownMenuItems.map((item, index) => (
-                      <li key={index} onClick={handleNavLinkClick}>
-                        <NavLink to={item.to}>{item.label}</NavLink>
-                      </li>
-                      
-                    ))}
-                  </ul>
-                )}
-              </li> */}
             </ul>
           </nav>
 
