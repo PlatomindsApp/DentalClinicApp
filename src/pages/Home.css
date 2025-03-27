@@ -97,7 +97,7 @@
 }
 
 /* ✅ Heading */
-h1 {
+.our-services {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   color: #3660D9;
   margin-bottom: 1.5rem;
@@ -125,7 +125,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  h1 {
+  .our-services {
     font-size: 2.5rem;
   }
 
@@ -135,7 +135,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  h1 {
+  .our-services {
     font-size: 2rem;
   }
 
@@ -224,13 +224,6 @@ p {
   align-items: center;
 }
 
-.grid-image {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-}
-
 /* ✅ Right Column (Third Column) */
 .services-container .service-card:nth-child(4) {
   grid-column: 3;
@@ -255,8 +248,7 @@ p {
 
 .text-center h1 {
   font-size: 3rem;
-  /* Responsive font size */
-  padding: 5rem;
+  padding: 5rem 0rem 0rem 0rem;
 }
 
 .text-center h3 {
@@ -274,5 +266,58 @@ p {
 
   .text-center h3 {
     font-size: 1.2rem;
+  }
+}
+
+/* Enquiry Section css  */
+.enquiry-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Wrap items for responsiveness */
+  justify-content: center;
+  max-width: 90%; /* Allows better fit on smaller screens */
+  margin: 4rem auto;
+  background-color: aqua;
+  padding: 1rem;
+  height: auto; /* Remove fixed height to adapt dynamically */
+}
+
+/* Individual Enquiry Section */
+.enquiry-container > div {
+  background-color: #f1f1f1;
+  width: 25rem; /* Default width */
+  margin: 1rem;
+  text-align: center;
+  line-height: 75px;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 10px; /* Optional for rounded corners */
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .enquiry-container {
+    max-width: 100%; /* Allow full width */
+    padding: 1rem;
+  }
+  
+  .enquiry-container > div {
+    width: 20rem; /* Decrease width for better fit */
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 480px) {
+  .enquiry-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+  }
+
+  .enquiry-container > div {
+    width: 90%; /* Use most of the screen width */
+    font-size: 16px;
+    line-height: 50px;
   }
 }
