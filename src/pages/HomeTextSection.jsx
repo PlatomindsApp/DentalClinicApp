@@ -40,7 +40,7 @@ const TextSection = () => {
     <>
       <div className="text-center">
         <h1 className="our-services">Our Services</h1>
-        <h3>What we provide</h3>
+        <h3>What We Provide</h3>
       </div>
 
       <div className="services-container">

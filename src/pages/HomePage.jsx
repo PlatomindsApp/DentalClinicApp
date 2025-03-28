@@ -5,6 +5,7 @@ import "./Home.css";
 import TextSection from "./HomeTextSection";
 import AboutTextSection from "./AboutText-section";
 import EnquiryForm from "./HomeEnquirySection";
+import Testimonials from "./HomeTestimonials";
 
 function HomePage() {
   return (
@@ -29,6 +30,8 @@ function HomePage() {
       <AboutTextSection />
       {/* Enquiry form section  */}
       <EnquiryForm/>
+      {/* Testimonials section with cards  */}
+      <Testimonials/>
     </>
   );
 }

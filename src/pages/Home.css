@@ -266,58 +266,315 @@ p {
 
   .text-center h3 {
     font-size: 1.2rem;
+    color: #0e264f;
   }
 }
 
 /* Enquiry Section css  */
+.enquiry-wrapper {
+  background: #ffffff;
+  padding: 3rem 1rem 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flexbox container */
 .enquiry-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /* Wrap items for responsiveness */
-  justify-content: center;
-  max-width: 90%; /* Allows better fit on smaller screens */
-  margin: 4rem auto;
-  background-color: aqua;
-  padding: 1rem;
-  height: auto; /* Remove fixed height to adapt dynamically */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  /* Space between inputs */
+  padding: 5rem;
+  max-width: 80%;
+  background: #fff;
+  /* Light grey background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Individual Enquiry Section */
-.enquiry-container > div {
-  background-color: #f1f1f1;
-  width: 25rem; /* Default width */
-  margin: 1rem;
-  text-align: center;
-  line-height: 75px;
-  font-size: 20px;
-  padding: 1rem;
-  border-radius: 10px; /* Optional for rounded corners */
+/* Input fields */
+.form-fields {
+  flex: 1;
+  /* Makes inputs flexible */
+  min-width: 200px;
+  /* Prevents inputs from shrinking too much */
+  max-width: 250px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: transparent;
+  /* Transparent background */
+  color: black;
+  /* Black text color */
+  border: none;
+  /* No border */
+  transition: all 0.3s ease;
 }
 
-/* Responsive for tablets */
+/* Focus effect */
+.form-fields:focus {
+  outline: none;
+  border-bottom: 2px solid #0056b3;
+  /* Darker blue underline on focus */
+}
+
+/* Placeholder styling */
+.form-fields::placeholder {
+  font-size: 16px;
+  color: #0e264f;
+  /* placeholder text */
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 1024px) {
+  .enquiry-container {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .enquiry-container {
-    max-width: 100%; /* Allow full width */
-    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  .enquiry-container > div {
-    width: 20rem; /* Decrease width for better fit */
-    font-size: 18px;
-    line-height: 60px;
+
+  .form-fields {
+    max-width: 45%;
+    /* 2 inputs per row on tablets */
   }
 }
 
-/* Responsive for mobile screens */
 @media (max-width: 480px) {
   .enquiry-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center content */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .enquiry-container > div {
-    width: 90%; /* Use most of the screen width */
-    font-size: 16px;
-    line-height: 50px;
+  .form-fields {
+    max-width: 100%;
+    /* Full width on mobile */
+  }
+}
+/* Flexbox container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Card Styling */
+.card {
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: #0e264f;
+}
+
+.rating {
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Carousel css  */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+section {
+  background: #F4F4F4;
+  padding: 50px 0;
+}
+
+.carousel-container {
+  max-width: 1044px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-wrapper {
+  display: block;
+  text-align: left;
+  position: relative;
+  margin-bottom: 22px;
+  
+  > input {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    
+    &:nth-of-type(6):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -500%; }
+    &:nth-of-type(5):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -400%; }
+    &:nth-of-type(4):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -300%; }
+    &:nth-of-type(3):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -200%; }
+    &:nth-of-type(2):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -100%; }
+    &:nth-of-type(1):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: 0%; }
+    
+    &:nth-of-type(1):checked ~ .carousel-thumbnails-list li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(2):checked ~ .carousel-thumbnails-list li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(3):checked ~ .carousel-thumbnails-list li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(4):checked ~ .carousel-thumbnails-list li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(5):checked ~ .carousel-thumbnails-list li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(6):checked ~ .carousel-thumbnails-list li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+  }
+}
+
+.carousel-slides-list {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.carousel-slide-item {
+  position: relative;
+  display: block;
+  flex: 1 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+
+  box-sizing: border-box;
+  white-space: normal;
+  
+  figure {
+    display: flex;
+  align-items: center; 
+  }
+  
+  div {
+    flex: 2;
+    @include aspect-ratio(4, 2);
+    max-height: 250px;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  figcaption {
+    flex: 1;
+    padding-left: 15px;
+  }
+  
+  .carousel-credit {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;        
+  }
+  
+  &.scrollable {
+    overflow-y: scroll;
+  }
+}
+
+.carousel-thumbnails-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  
+  margin: 0 -10px;
+  
+  .carousel-slides-list + & {
+    margin-top: 20px;
+  }
+  
+  li {        
+    flex: 1 1 auto;
+    max-width: calc((100% / 6) - 20px);  
+    margin: 0 10px;
+    transition: all 300ms ease-in-out;
+  }
+  
+  label {
+    display: block;
+    @include aspect-ratio(1,1);
+    
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      
+      img {
+        box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+        transition: all 300ms ease-in-out;
+      }
+    }
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

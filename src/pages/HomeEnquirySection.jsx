@@ -1,13 +1,16 @@
 const EnquiryForm = () => {
-    const enquirySections=[1,2,3,4];
-  return <>
-  <div className="enquiry-container">
-  {
-    enquirySections.map((curEnq,index)=>(
-     <div key={index}>{curEnq}</div>   
-    ))
-  }
-</div>
-  </>;
+  const enquirySections = ["Name", "Email", "Phone", "Message"];
+
+  return (
+    <div className="enquiry-wrapper">
+      <div className="enquiry-container">
+        {enquirySections.map((placeholder, index) => (
+          <input key={index} className="form-fields" placeholder={placeholder} />
+        ))}
+        <button type="submit" className="book-appointment-btn">Submit</button>
+      </div>
+    </div>
+  );
 };
+
 export default EnquiryForm;
