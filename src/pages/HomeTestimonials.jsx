@@ -1,63 +1,63 @@
-import dentistFourth from '../assets/dentistOne.jpg';
-const slides = [
-  { id: 1, img: "1041", credit: "Tim Marshall" },
-  { id: 2, img: "1043", credit: "Christian Joudrey" },
-  { id: 3, img: "1044", credit: "Steve Carter" },
-  { id: 4, img: "1045", credit: "Aleksandra Boguslawska" },
-  { id: 5, img: "1049", credit: "Rosan Harmens" },
-  { id: 6, img: "1052", credit: "Annie Spratt" },
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+
+const testimonials = [
+  {
+    img: "https://plus.unsplash.com/premium_photo-1672922646298-3afc6c6397c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlbnRpc3R8ZW58MHx8MHx8fDA%3D",
+    name: "Eleanor Crisp",
+    role: "About Dr.Eleanor Crisp",
+    quote: "Exceptional care and expertise! The dentists here are truly professionals who ensure a comfortable and pain-free experience. Highly recommended!",
+  },
+  {
+    img: "https://media.istockphoto.com/id/1680805041/photo/beautiful-indian-looking-nepali-dentist-doctor-girl-smiling-and-giving-gestures.webp?a=1&b=1&s=612x612&w=0&k=20&c=nGK0NSODhVl0huJVWPmY9hm-VDI4Zox5QCmn--y9BU0=",
+    name: "Gordon Norman",
+    role: "About Dr.Gordon Norman",
+    quote: "From consultation to treatment, the process was seamless. The team is highly skilled, and their attention to detail is unmatched.",
+  },
+  {
+    img: "https://media.istockphoto.com/id/1455851883/photo/dental-procedure-with-the-help-of-3d-tooth-scanner-technology.jpg?s=612x612&w=0&k=20&c=aZxnffoQ9pc3Hzpcbd_-glBoXvABAGnYrFQcJsqKpH0=",
+    name: "Sue Shei",
+    role: "About Dr.Sue Shei",
+    quote: "A top-notch dental clinic with state-of-the-art equipment and a caring staff. I felt at ease throughout my treatment.",
+  },
 ];
-const Testimonials = () => {
+
+const ProfileCard = ({ img, name, role, quote }) => {
+  const [hover, setHover] = useState(false);
+
   return (
-    <>
-    <section>
-      <div className="carousel-container">
-        <div className="carousel-wrapper">
-          {slides.map((slide, index) => (
-            <input
-              key={slide.id}
-              type="radio"
-              name="carousel-slides"
-              id={`carousel-slide-${slide.id}`}
-              defaultChecked={index === 0}
-            />
-          ))}
-
-          <ul className="carousel-slides-list">
-            {slides.map((slide) => (
-              <li className="carousel-slide-item" key={slide.id}>
-                <figure>
-                  <div>
-                    <img
-                      src={dentistFourth}
-                      alt="Slide image"
-                    />
-                  </div>
-                  <figcaption>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <span className="carousel-credit">Photo: {slide.credit}</span>
-                  </figcaption>
-                </figure>
-              </li>
-            ))}
-          </ul>
-
-          <ul className="carousel-thumbnails-list">
-            {slides.map((slide) => (
-              <li key={slide.id}>
-                <label htmlFor={`carousel-slide-${slide.id}`}>
-                  <img
-                    src={`https://picsum.photos/id/${slide.img}/150/150`}
-                    alt="Thumbnail"
-                  />
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-    </>
+    <figure
+      className={`profile-card ${hover ? "hover" : ""}`}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <img src={img} alt={name} className="profile-img" />
+      <figcaption>
+        <h2>{name}</h2>
+        <h4 className="dentist-description">{role}</h4>
+        <blockquote className="dentist-description">{quote}</blockquote>
+      </figcaption>
+    </figure>
   );
 };
-export default Testimonials;
+
+const ProfileList = () => {
+  return (
+    <section className="profile-list">
+      {/* Heading above the profile cards */}
+      <div className="text-center">
+        <h1 className="our-services">Testimonial</h1>
+        <h3 className="testimony">Hear from our happy patients about their experiences with our expert dentists.</h3>
+      </div>
+
+      {/* Profile Cards */}
+      <div className="profiles-container">
+        {testimonials.map((profile, index) => (
+          <ProfileCard key={index} {...profile} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ProfileList;

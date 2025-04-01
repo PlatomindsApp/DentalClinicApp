@@ -6,6 +6,7 @@ import TextSection from "./HomeTextSection";
 import AboutTextSection from "./AboutText-section";
 import EnquiryForm from "./HomeEnquirySection";
 import Testimonials from "./HomeTestimonials";
+import PlanCards from "./HomePlanCards";
 
 function HomePage() {
   return (
@@ -29,9 +30,12 @@ function HomePage() {
       {/* About us section  */}
       <AboutTextSection />
       {/* Enquiry form section  */}
-      <EnquiryForm/>
+      <EnquiryForm />
       {/* Testimonials section with cards  */}
-      <Testimonials/>
+      <Testimonials />
+      {/* Plan cards  */}
+      <PlanCards/>
+
     </>
   );
 }

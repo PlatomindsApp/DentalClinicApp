@@ -87,7 +87,10 @@ h2 {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   border: 5px solid #007BFF;
 }
-
+.image-container:hover {
+  transform: scale(1.1); /* Zooms in the image */
+  opacity: 0.9; /* Slight opacity change for hover effect */
+}
 /* Text Styling */
 .text-container {
   flex: 1;

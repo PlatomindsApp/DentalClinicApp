@@ -15,6 +15,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 15px;
+  /* Optional: adds rounded corners to the image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.background-img:hover {
+  transform: scale(1.1);
+  /* Zooms in the image */
+  opacity: 0.9;
 }
 
 /* ✅ Overlay Content (Text & Button) */
@@ -100,27 +110,39 @@
 .our-services {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   color: #3660D9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ✅ Paragraph */
 p {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: #333;
+  /* font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: #0e264f;
   max-width: 55%;
   line-height: 1.6;
+  font-family: "Poppins", sans-serif; */
+
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  /* Adjusted clamp values for better readability */
+  color: #0e264f;
+  max-width: 100%;
+  /* Increased max-width for small devices */
+  line-height: 1.8;
+  /* Increased line height for better spacing */
+  font-family: "Poppins", sans-serif;
 }
 
 /* ✅ Responsive Text Adjustments */
 @media (max-width: 1280px) {
   p {
-    max-width: 65%;
+    max-width: 100%;
+    color: #0e264f;
   }
 }
 
 @media (max-width: 1024px) {
   p {
-    max-width: 70%;
+    max-width: 90%; 
+    color: #0e264f;
   }
 }
 
@@ -130,7 +152,9 @@ p {
   }
 
   p {
-    max-width: 85%;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    /* Increase minimum font size for mobile */
+    max-width: 90%;
   }
 }
 
@@ -140,104 +164,10 @@ p {
   }
 
   p {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    /* Adjust for small devices */
     max-width: 90%;
   }
-}
-
-/* ✅ Services Section */
-.services-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* Three columns */
-  gap: 20px;
-  align-items: center;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ✅ Service Cards */
-.service-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid #ddd;
-  font-family: "Poppins", sans-serif;
-  color: #0e264f;
-}
-
-/* ✅ Center Image */
-.image-container {
-  grid-column: 2;
-  /* Places image in the center column */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-image {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-}
-
-.services-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* Three equal columns */
-  grid-template-rows: auto auto auto;
-  /* Three rows */
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ✅ Left Column (First Column) */
-.services-container .service-card:nth-child(1) {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.services-container .service-card:nth-child(2) {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.services-container .service-card:nth-child(3) {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-/* ✅ Center Image (Middle Row) */
-.image-container {
-  grid-column: 2;
-  /* Center column */
-  grid-row: 2;
-  /* Middle row */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ✅ Right Column (Third Column) */
-.services-container .service-card:nth-child(4) {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.services-container .service-card:nth-child(5) {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.services-container .service-card:nth-child(6) {
-  grid-column: 3;
-  grid-row: 3;
 }
 
 .text-center {
@@ -248,15 +178,12 @@ p {
 
 .text-center h1 {
   font-size: 3rem;
-  padding: 5rem 0rem 0rem 0rem;
+  padding: 2rem 0rem 0rem 0rem;
 }
 
 .text-center h3 {
   font-size: 5rem;
-  /* Responsive font size */
   color: #0e264f;
-  ;
-  /* Optional: Adds a slight contrast */
 }
 
 @media (max-width: 768px) {
@@ -356,225 +283,364 @@ p {
     /* Full width on mobile */
   }
 }
-/* Flexbox container */
-.card-container {
+
+/* Carousel css  */
+.profile-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.profiles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
-  background-color: #f8f9fa; /* Light background */
+  gap: 20px;
+  padding-bottom: 10rem;
 }
 
-/* Card Styling */
-.card {
+.profile-card {
   width: 250px;
-  background: white;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+.profile-card.hover {
   transform: scale(1.05);
 }
 
-/* Card Image */
-.card-image {
+.profile-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: auto;
 }
 
-/* Card Content */
-.card-content {
-  padding: 1rem;
+figcaption {
+  padding: 15px;
 }
 
-.card h3 {
-  margin: 0.5rem 0;
+h2 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.testimony {
+  padding: 4rem;
+}
+
+.dentist-description {
   color: #0e264f;
+  font-family: "Poppins", sans-serif;
 }
 
-.rating {
+/* Center the carousel and remove unwanted scrolling */
+.carousel-wrapper {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* Center the heading */
+.carousel-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0e264f;
+  /* Color for heading */
+  word-wrap: break-word;
+  /* Allow the heading to wrap if needed */
+  white-space: normal;
+  /* Allow heading to break into multiple lines */
+  height: auto;
+}
+
+/*
+}
+
+/* Card styling */
+.carouselCard {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* Allow height to adjust based on content */
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  justify-content: space-between;
+  /* Distribute space between heading and paragraph */
+  text-align: center;
+  font-size: 18px;
   font-weight: bold;
-  color: #ffcc00;
-  margin-bottom: 0.5rem;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-/* Responsive Design */
+.carousel-heading,
+.carousel-paragraph {
+  overflow: hidden;
+  /* Hide overflow text */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) for long text */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  height: 100%;
+  /* Ensure text stays within card */
+  display: block;
+  /* Ensure the block formatting context */
+}
+
+.carousel-paragraph {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0e264f;
+  padding: 10px 0;
+  word-wrap: break-word;
+  /* Ensure the text can wrap inside */
+  white-space: normal;
+  /* Allow paragraph text to wrap */
+  flex-grow: 1;
+  /* Allow the paragraph to take up available space */
+  overflow: hidden;
+  /* Prevent overflow */
+  text-overflow: ellipsis;
+  /* Add ellipsis if text is too long */
+  max-height: 100px;
+}
+
 @media (max-width: 768px) {
-  .card {
-    width: 90%;
+  .carouselCard {
+    max-width: 90%;
+    /* Ensure the card takes more space on smaller screens */
+    height: auto;
+    /* Allow height to adjust */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .carousel-heading {
+    font-size: 18px;
+    /* Reduce the font size on mobile */
+  }
+
+  .carousel-paragraph {
+    color: #0e264f;
+    font-size: 12px;
+    /* Reduce paragraph font size */
+    max-height: none;
+    /* Allow the paragraph to grow and show fully */
+    margin-bottom: 10px;
+    /* Ensure there's space below */
+  }
+}
+
+/* For very small screens like phones in portrait mode */
+@media (max-width: 480px) {
+  .carouselCard {
+    max-width: 100%;
+    /* Take full width on smaller screens */
+  }
+
+  .carousel-heading {
+    font-size: 16px;
+    /* Further reduce the font size on very small screens */
+  }
+
+  .carousel-paragraph {
+    color: #0e264f;
+    font-size: 12px;
+    /* Keep paragraph font size small on mobile */
+  }
+}
+
+/* Adjust slick slide styles to avoid horizontal scroll */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+    max-width: 90%;
+  }
+}
+
+/* Fix layout on small screens */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    max-width: 90%;
+  }
+
+  .carouselCard {
+    max-width: 250px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    max-width: 95%;
+  }
+
+  .carouselCard {
+    max-width: 220px;
+    height: 250px;
   }
 }
 
 @media (max-width: 480px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+  .carousel-wrapper {
+    max-width: 100%;
   }
-}
-/* Carousel css  */
-@mixin aspect-ratio($width, $height) {
-  position: relative;
-  
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-  
-  > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-section {
-  background: #F4F4F4;
-  padding: 50px 0;
-}
 
-.carousel-container {
-  max-width: 1044px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.carousel-wrapper {
-  display: block;
-  text-align: left;
-  position: relative;
-  margin-bottom: 22px;
-  
-  > input {
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    
-    &:nth-of-type(6):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -500%; }
-    &:nth-of-type(5):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -400%; }
-    &:nth-of-type(4):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -300%; }
-    &:nth-of-type(3):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -200%; }
-    &:nth-of-type(2):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: -100%; }
-    &:nth-of-type(1):checked ~ .carousel-slides-list .carousel-slide-item:first-of-type { margin-left: 0%; }
-    
-    &:nth-of-type(1):checked ~ .carousel-thumbnails-list li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-    &:nth-of-type(2):checked ~ .carousel-thumbnails-list li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-    &:nth-of-type(3):checked ~ .carousel-thumbnails-list li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-    &:nth-of-type(4):checked ~ .carousel-thumbnails-list li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-    &:nth-of-type(5):checked ~ .carousel-thumbnails-list li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-    &:nth-of-type(6):checked ~ .carousel-thumbnails-list li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+  .carouselCard {
+    max-width: 200px;
+    height: 230px;
   }
 }
 
-.carousel-slides-list {
+/* Plan cards */
+/* From Uiverse.io by Yaya12085 */
+.plan {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+  padding: 10px;
+  background-color: #fff;
+  /* Card background set to white */
+  color: #697e91;
+  max-width: 300px;
+}
+
+.plan strong {
+  font-weight: 600;
+  color: #425275;
+}
+
+.plan .inner {
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #fff;
+  /* Changed from #ecf0ff to #fff for white background */
+  border-radius: 12px;
   position: relative;
-  z-index: 1;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
+}
+
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bed6fb;
+  border-radius: 99em 0 0 99em;
   display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #425475;
 }
 
-.carousel-slide-item {
-  position: relative;
-  display: block;
-  flex: 1 0 100%;
+.plan .pricing small {
+  color: #707a91;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+.plan .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #425675;
+}
+
+.plan .title+* {
+  margin-top: 0.75rem;
+}
+
+.plan .info+* {
+  margin-top: 1rem;
+}
+
+.plan .features {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan .features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plan .features li+* {
+  margin-top: 0.75rem;
+}
+
+.plan .features .icon {
+  background-color: #1FCAC5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.plan .features+* {
+  margin-top: 1.25rem;
+}
+
+.plan .action {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: all 300ms ease-out;
-
-  box-sizing: border-box;
-  white-space: normal;
-  
-  figure {
-    display: flex;
-  align-items: center; 
-  }
-  
-  div {
-    flex: 2;
-    @include aspect-ratio(4, 2);
-    max-height: 250px;
-  }
-  
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  figcaption {
-    flex: 1;
-    padding-left: 15px;
-  }
-  
-  .carousel-credit {
-    margin-top: 1rem;
-    color: rgba(0, 0, 0, 0.5);
-    display: block;        
-  }
-  
-  &.scrollable {
-    overflow-y: scroll;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-.carousel-thumbnails-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  
-  margin: 0 -10px;
-  
-  .carousel-slides-list + & {
-    margin-top: 20px;
-  }
-  
-  li {        
-    flex: 1 1 auto;
-    max-width: calc((100% / 6) - 20px);  
-    margin: 0 10px;
-    transition: all 300ms ease-in-out;
-  }
-  
-  label {
-    display: block;
-    @include aspect-ratio(1,1);
-    
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      
-      img {
-        box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
-        transition: all 300ms ease-in-out;
-      }
-    }
-  }
-  
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.plan .button {
+  background-color: #6558d3;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 0.625em 0.75em;
+  text-decoration: none;
+}
+
+.plan .button:hover,
+.plan .button:focus {
+  background-color: #4133B7;
 }
