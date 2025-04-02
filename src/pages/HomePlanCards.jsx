@@ -61,6 +61,10 @@ const PlanCards = () => {
 
   return (
     <StyledWrapper>
+      <div className="text-center">
+        <h3 className="our-services">Our Plans</h3>
+        {/* <h3>What We Provide</h3> */}
+      </div>
       <div className="plan-container">
         {/* Basic Plan Card */}
         <div className="plan">
@@ -156,9 +160,11 @@ const PlanCards = () => {
 const StyledWrapper = styled.div`
   .plan-container {
     display: flex;
-    justify-content: center; /* Centers the cards */
-    gap: 20px; /* Slightly larger gap between cards */
+    justify-content: center; /* Ensures the cards are centered */
+    gap: 10px; /* Reduced the gap */
     margin-top: 20px;
+    flex-wrap: wrap;
+    padding-bottom:10rem;
   }
 
   .plan {
@@ -168,116 +174,16 @@ const StyledWrapper = styled.div`
     background-color: #fff;
     color: #697e91;
     max-width: 300px;
-    flex: 1;
-  }
-
-  .plan strong {
-    font-weight: 600;
-    color: #425275;
+    flex: 1 1 280px; /* Ensures flexibility and centering */
   }
 
   .plan .inner {
-    align-items: center;
     padding: 20px;
     padding-top: 40px;
     background-color:#fff;
     border-radius: 12px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  }
-
-  .plan .pricing {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #bed6fb;
-    border-radius: 99em 0 0 99em;
-    display: flex;
-    align-items: center;
-    padding: 0.625em 0.75em;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #0e264f;
-  }
-
-  .plan .pricing small {
-    color: #0e264f;
-    font-size: 0.75em;
-    margin-left: 0.25em;
-  }
-
-  .plan .title {
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #3660d9;
-    margin-top: 10px; /* Adds margin to the top of the title */
-  }
-
-  .plan .info + * {
-    margin-top: 1rem;
-    color: #0e264f;
-  }
-
-  .plan .features {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .plan .features li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .plan .features li + * {
-    margin-top: 0.75rem;
-  }
-
-  .plan .features .icon {
-    background-color: #1fcac5;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-  }
-
-  .plan .features .icon svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .plan .features + * {
-    margin-top: 1.25rem;
-  }
-
-  .plan .action {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .plan .button {
-    background: linear-gradient(135deg, #4f9dff, #1e40af);
-    color: white;
-    padding: 12px 24px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
-  }
-
-  .plan .button:hover,
-  .plan .button:focus {
-    background-color: #4133b7;
   }
 `;
 

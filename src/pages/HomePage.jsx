@@ -7,6 +7,8 @@ import AboutTextSection from "./AboutText-section";
 import EnquiryForm from "./HomeEnquirySection";
 import Testimonials from "./HomeTestimonials";
 import PlanCards from "./HomePlanCards";
+import FAQ from "./FaQs";
+import CustomCarousel from "./HomeCarousel";
 
 function HomePage() {
   return (
@@ -34,8 +36,11 @@ function HomePage() {
       {/* Testimonials section with cards  */}
       <Testimonials />
       {/* Plan cards  */}
-      <PlanCards/>
-
+      <PlanCards />
+      {/* FAQ */}
+      <FAQ/>
+      {/* CustomCarousel  */}
+      <CustomCarousel/>
     </>
   );
 }

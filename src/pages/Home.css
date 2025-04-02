@@ -141,7 +141,7 @@ p {
 
 @media (max-width: 1024px) {
   p {
-    max-width: 90%; 
+    max-width: 90%;
     color: #0e264f;
   }
 }
@@ -178,7 +178,7 @@ p {
 
 .text-center h1 {
   font-size: 3rem;
-  padding: 2rem 0rem 0rem 0rem;
+  padding: 5rem 0rem 0rem 0rem;
 }
 
 .text-center h3 {
@@ -200,7 +200,7 @@ p {
 /* Enquiry Section css  */
 .enquiry-wrapper {
   background: #ffffff;
-  padding: 3rem 1rem 5rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,8 +283,6 @@ p {
     /* Full width on mobile */
   }
 }
-
-/* Carousel css  */
 .profile-list {
   max-width: 1200px;
   margin: 0 auto;
@@ -297,7 +295,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 .profile-card {
@@ -329,14 +327,14 @@ h2 {
 }
 
 .testimony {
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .dentist-description {
   color: #0e264f;
   font-family: "Poppins", sans-serif;
 }
-
+/* Carousel css  */
 /* Center the carousel and remove unwanted scrolling */
 .carousel-wrapper {
   max-width: 80%;
@@ -524,7 +522,6 @@ h2 {
 }
 
 /* Plan cards */
-/* From Uiverse.io by Yaya12085 */
 .plan {
   border-radius: 16px;
   box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
@@ -572,8 +569,8 @@ h2 {
 
 .plan .title {
   font-weight: 600;
-  font-size: 1.25rem;
-  color: #425675;
+  font-size: 2.25rem;
+  color:#0e264f;
 }
 
 .plan .title+* {
@@ -627,7 +624,7 @@ h2 {
 }
 
 .plan .button {
-  background-color: #6558d3;
+  background: linear-gradient(135deg, #4f9dff, #1e40af);
   border-radius: 6px;
   color: #fff;
   font-weight: 500;
@@ -643,4 +640,202 @@ h2 {
 .plan .button:hover,
 .plan .button:focus {
   background-color: #4133B7;
+}
+/* FAQ css  */
+.faq-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #4f9dff;
+  padding: 50px;
+  color: white;
+}
+
+.faq-content {
+  flex: 1;
+  padding: 20px;
+  min-width: 320px; /* Ensures content does not shrink too much */
+}
+
+.faq-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3a6ea5;
+}
+
+.faq-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  background: white;
+  color: black;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: white;
+}
+
+.faq-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 50%; /* Default size for larger screens */
+}
+
+.faq-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .faq-container {
+    flex-direction: column; /* Stack elements */
+    text-align: center;
+  }
+
+  .faq-image {
+    max-width: 100%; /* Image takes full width on small screens */
+    margin-bottom: 20px;
+  }
+
+  .faq-content {
+    max-width: 100%;
+  }
+
+  .faq-image img {
+    max-width: 90%;
+  }
+}
+
+/* CustomCarousel css */
+.custom-carousel-wrapper {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.custom-carousel-card {
+  width: 100%;
+  max-width: 300px;
+  height: 400px; /* Fixed height to maintain uniformity */
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-carousel-image {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-carousel-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0e264f;
+  margin-bottom: 10px;
+}
+
+.custom-carousel-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0e264f;
+  padding: 10px 0;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* Placeholder styling for Preventive Care */
+.custom-carousel-placeholder {
+  font-size: 14px;
+  color: #3a6ea5;
+  background: #f0f4f8;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .custom-carousel-card {
+    max-width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .custom-carousel-image {
+    max-width: 90%;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-carousel-card {
+    max-width: 100%;
+  }
+
+  .custom-carousel-image {
+    max-width: 100%;
+  }
 }

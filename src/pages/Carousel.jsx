@@ -68,8 +68,8 @@ const Carousel = () => {
       <Slider {...settings}>
         {carouselCards.map((currentCard, index) => (
           <div key={index} className="carouselCard">
-            <h2 className="dentist-description">{currentCard.title}</h2>
-            <span>{currentCard.description}</span>
+            <blockquote>{currentCard.title}</blockquote>
+            <h2 className="dentist-description">{currentCard.description}</h2>
           </div>
         ))}
       </Slider>
@@ -78,3 +78,5 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+
