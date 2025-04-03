@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const testimonials = [
   {
     img: "https://plus.unsplash.com/premium_photo-1672922646298-3afc6c6397c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlbnRpc3R8ZW58MHx8MHx8fDA%3D",
@@ -23,39 +25,57 @@ const testimonials = [
 ];
 
 const ProfileCard = ({ img, name, role, quote }) => {
-  const [hover, setHover] = useState(false);
-
   return (
-    <figure
-      className={`profile-card ${hover ? "hover" : ""}`}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+    <div className="profile-card">
       <img src={img} alt={name} className="profile-img" />
       <figcaption>
         <h2>{name}</h2>
         <h4 className="dentist-description">{role}</h4>
         <blockquote className="dentist-description">{quote}</blockquote>
       </figcaption>
-    </figure>
+    </div>
   );
 };
 
 const ProfileList = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2, // Show 2 cards at a time
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablets
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="profile-list">
-      {/* Heading above the profile cards */}
+      {/* Heading */}
       <div className="text-center">
         <h1 className="our-services">Testimonial</h1>
         <h3 className="testimony">Hear from our happy patients about their experiences with our expert dentists.</h3>
       </div>
 
-      {/* Profile Cards */}
-      <div className="profiles-container">
+      {/* Carousel */}
+      <Slider {...settings} className="profiles-carousel">
         {testimonials.map((profile, index) => (
           <ProfileCard key={index} {...profile} />
         ))}
-      </div>
+      </Slider>
     </section>
   );
 };

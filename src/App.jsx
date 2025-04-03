@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './pages/NavBar'
@@ -11,6 +12,7 @@ import DoctorsList from './pages/DoctorsList'
 import FaQs from './pages/FaQs'
 import ErrorPage from './pages/ErrorPage'
 import FindADoctor from './pages/FindADoctor'
+import Footer from './pages/Footer';
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +30,7 @@ function App() {
       <Route path='/faqs' element={<FaQs/>}/>
       <Route path='/errorpage' element={<ErrorPage/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }

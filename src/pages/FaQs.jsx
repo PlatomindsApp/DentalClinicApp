@@ -10,7 +10,7 @@ const FAQ = () => {
     "Vivamus rhoncus ante a ipsum imperdiet ?",
     "Vivamus rhoncus ante a ipsum imperdiet ?",
     "Vivamus rhoncus ante a ipsum imperdiet ?",
-    "Vivamus rhoncus ante a ipsum imperdiet ?",
+    "Vivamus rhoncus ante a ipsum imperdiet ?"
   ];
 
   return (
@@ -20,18 +20,35 @@ const FAQ = () => {
         <h2 className="faq-heading">Frequently Asked Question</h2>
         <div className="faq-list">
           {faqs.map((question, index) => (
-            <div key={index} className="faq-item" onClick={() => toggleFAQ(index)}>
+            <div
+              key={index}
+              className="faq-item"
+              onClick={() => toggleFAQ(index)}
+            >
               <div className="faq-question">
                 {question}
-                <span className={`faq-icon ${openIndex === index ? "rotate" : ""}`}>◄</span>
+                <span
+                  className={`faq-icon ${openIndex === index ? "rotate" : ""}`}
+                >
+                  ◄
+                </span>
               </div>
-              {openIndex === index && <div className="faq-answer">This is the answer to the question.</div>}
+              {openIndex === index && (
+                <div className="faq-answer">
+                  This is the answer to the question.
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
       <div className="faq-image">
-        <img src={'https://www.wockhardthospitals.com/wp-content/uploads/2023/05/Treatment-Image-16.png'} alt="Dental Checkup" />
+        <img
+          src={
+            "https://www.wockhardthospitals.com/wp-content/uploads/2023/05/Treatment-Image-16.png"
+          }
+          alt="Dental Checkup"
+        />
       </div>
     </div>
   );

@@ -1,6 +1,10 @@
 import aboutbgImg from '../assets/aboutbgImg.jpg';
 import './AboutUs.css';
 import AboutTextSection from './AboutText-section';
+import AppointmentSection from './AppointmentSection';
+import CustomCarousel from './HomeCarousel';
+import FAQ from './FaQs';
+import AppointmentCards from './AppointmentCards';
 function AboutUs() {
   return (
     <><div className="about-container">
@@ -11,6 +15,10 @@ function AboutUs() {
       </div>
     </div>
     <AboutTextSection/>
+    <AppointmentSection/>
+    <CustomCarousel/>
+    <FAQ/>
+    <AppointmentCards/>
 </>
   );
 }
