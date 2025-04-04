@@ -1,55 +1,53 @@
-import { useState } from 'react';
-import { doctors } from '../pages/dummyData';
 
-const timeSlots = ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'];
+import "./BookApp.css"; // Importing CSS file
 
 const BookAppointment = () => {
-  const [selectedDoctor, setSelectedDoctor] = useState('');
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Appointment booked with ${selectedDoctor} at ${selectedTimeSlot}`);
-  };
-
   return (
-    <div>
-      <h1>Book an Appointment</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="doctor">Select a doctor:</label>
-          <select 
-            id="doctor" 
-            name="doctor" 
-            value={selectedDoctor} 
-            onChange={(e) => setSelectedDoctor(e.target.value)}
-          >
-            <option value="">Select a doctor</option>
-            {doctors.map(doctor => (
-              <option key={doctor.id} value={doctor.name}>
-                {doctor.name}
-              </option>
-            ))}
-          </select>
+    <div className="appointment-wrapper">
+      {/* Form Section */}
+      <div className="form-container">
+        <h2 className="form-title">Make Appointment</h2>
+
+        <div className="form-grid">
+          <input type="text" placeholder="First Name" className="input-field" />
+          <input type="email" placeholder="Email" className="input-field" />
+          <input type="tel" placeholder="Phone No." className="input-field" />
+          <input type="text" placeholder="Subject" className="input-field" />
+          <textarea placeholder="Write comments" className="input-field textarea"></textarea>
         </div>
-        <div>
-          <label htmlFor="timeSlot">Select a time slot:</label>
-          <select 
-            id="timeSlot" 
-            name="timeSlot" 
-            value={selectedTimeSlot} 
-            onChange={(e) => setSelectedTimeSlot(e.target.value)}
-          >
-            <option value="">Select a time slot</option>
-            {timeSlots.map(slot => (
-              <option key={slot} value={slot}>
-                {slot}
-              </option>
-            ))}
-          </select>
+
+        <button className="submit-btn">SUBMIT NOW</button>
+      </div>
+
+      {/* Contact Info Section */}
+      <div className="contact-info">
+        {/* Address */}
+        <div className="info-box">
+          <div className="icon">📍</div>
+          <div>
+            <h3 className="info-title">Office Address</h3>
+            <p className="info-text">380 St Kilda Road, Melbourne VIC 3004, Australia</p>
+          </div>
         </div>
-        <button type="submit">Book Appointment</button>
-      </form>
+
+        {/* Working Hours */}
+        <div className="info-box">
+          <div className="icon">⏰</div>
+          <div>
+            <h3 className="info-title">Working Hours</h3>
+            <p className="info-text">Monday to Friday 09:00 to 18:30<br />Saturday 15:30</p>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="info-box">
+          <div className="icon">📧</div>
+          <div>
+            <h3 className="info-title">Message Us</h3>
+            <p className="info-text">support@example.com<br />info@example.com</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 
 import "./Service.css";
-import aboutbgImg from '../assets/aboutbgImg.jpg';
 import EnquiryForm from "./HomeEnquirySection";
 import ProfileList from "./HomeTestimonials";
 import PlanCards from "./HomePlanCards";
@@ -47,7 +46,7 @@ const services = [
 const ServicesCards = () => {
   return (
     <><div className="about-container">
-      <img src={aboutbgImg} alt="About Us" className="about-image" />
+      <img src={'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/mnl6qGkxVKFMG0QN/blue-simple-love-your-teeth-instagram-post-1500-x-1080-piksel-azerice-1-AQE4wZ2xQZhg4lLQ.jpg'} alt="About Us" className="about-image" />
       <div className="about-text">
         <h1>Services</h1>
         <h2>Home | Services</h2>

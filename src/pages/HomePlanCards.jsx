@@ -62,7 +62,7 @@ const PlanCards = () => {
   return (
     <StyledWrapper>
       <div className="text-center">
-        <h3 className="our-services">Our Plans</h3>
+        <h1 className="our-services">Our Plans</h1>
         {/* <h3>What We Provide</h3> */}
       </div>
       <div className="plan-container">

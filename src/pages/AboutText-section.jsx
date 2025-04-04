@@ -1,4 +1,4 @@
-import aboutImg from "../assets/aboutImg.png";
+// import aboutImg from "../assets/aboutImg.png";
 
 const AboutTextSection = () => {
   return (
@@ -6,7 +6,12 @@ const AboutTextSection = () => {
       <section className="image-text-section">
         {/* Image */}
         <div className="image-container">
-          <img src={aboutImg} alt="Dental Care" />
+          <img
+            src={
+              "https://estheticabroad.com/wp-content/uploads/2024/02/aesthetic-dentistry-scaled.jpg"
+            }
+            alt="Dental Care"
+          />
         </div>
 
         {/* Text Description */}
