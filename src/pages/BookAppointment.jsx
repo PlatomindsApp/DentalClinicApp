@@ -1,5 +1,5 @@
 
-import "./BookApp.css"; // Importing CSS file
+import "./BookAppointment.css"; // Importing CSS file
 
 const BookAppointment = () => {
   return (
@@ -16,7 +16,7 @@ const BookAppointment = () => {
           <textarea placeholder="Write comments" className="input-field textarea"></textarea>
         </div>
 
-        <button className="submit-btn">SUBMIT NOW</button>
+        <button className="submit-btn">Submit</button>
       </div>
 
       {/* Contact Info Section */}

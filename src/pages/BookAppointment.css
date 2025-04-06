@@ -1,12 +1,13 @@
 /* Wrapper */
 .appointment-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #f7f7f7;
+  height: 50vh;
     padding: 20px;
+    gap: 5rem;
   }
   
   /* Form Container */
@@ -23,7 +24,7 @@
   .form-title {
     font-size: 24px;
     font-weight: bold;
-    color: #1e293b;
+    color: #0e264f;
     margin-bottom: 20px;
   }
   

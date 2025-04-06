@@ -11,7 +11,7 @@ import Services from './pages/Services'
 import DoctorsList from './pages/DoctorsList'
 import FaQs from './pages/FaQs'
 import ErrorPage from './pages/ErrorPage'
-import FindADoctor from './pages/FindADoctor'
+import FindDoctor from './pages/FindDoctor'
 import Footer from './pages/Footer';
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Route path='/blog' element={<Blog/>}/>
       <Route path='/booking' element={<BookAppointment/>}/>
       <Route path='/contact-us' element={<ContactUs/>}/>
-      <Route path='/find-a-doctor' element={<FindADoctor/>}/>
+      <Route path='/find-a-doctor' element={<FindDoctor/>}/>
       <Route path='/doctors-list' element={<DoctorsList/>}/>
       <Route path='/services' element={<Services/>}/>
       <Route path='navbar' element={<NavBar/>}/>

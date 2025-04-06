@@ -1,32 +1,21 @@
-const ContactUs = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for your message!');
-  };
+import BookAppointment from "./BookAppointment";
+import "./ContactUs.css";
 
+const ContactUs = () => {
   return (
-    <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+    <div className="contact-section">
+      <div className="contact-image-wrapper">
+        <img
+          className="contact-background-img"
+          src="https://www.shutterstock.com/image-photo/dental-care-smiling-woman-showing-260nw-788843587.jpg"
+          alt="Contact-Us"
+        />
+        <div className="form-overlay">
+          <BookAppointment />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div>
-          <label htmlFor="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+      </div>
     </div>
   );
 };
-export default ContactUs
+
+export default ContactUs;
