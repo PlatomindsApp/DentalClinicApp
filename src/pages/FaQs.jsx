@@ -7,17 +7,17 @@ const FAQ = () => {
   };
 
   const faqs = [
-    "Vivamus rhoncus ante a ipsum imperdiet ?",
-    "Vivamus rhoncus ante a ipsum imperdiet ?",
-    "Vivamus rhoncus ante a ipsum imperdiet ?",
-    "Vivamus rhoncus ante a ipsum imperdiet ?"
+    "Frequently Asked Questions",
+    "Frequently Asked Questions",
+    "Frequently Asked Questions",
+    "Frequently Asked Questions"
   ];
 
   return (
     <div className="faq-container">
       <div className="faq-content">
         <h6 className="faq-title">FAQ</h6>
-        <h2 className="faq-heading">Frequently Asked Question</h2>
+        <h2 className="faq-heading">Frequently Asked Questions</h2>
         <div className="faq-list">
           {faqs.map((question, index) => (
             <div

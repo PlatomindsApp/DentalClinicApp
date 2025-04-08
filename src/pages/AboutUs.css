@@ -100,13 +100,15 @@ h2 {
   font-size: 28px;
   font-weight: 600;
   color: #007BFF;
+  font-weight: bold;
 }
 
 .text-container p {
-  font-size: 16px;
-  color: #555;
+  font-size: 2.2rem;
+  color: #0e264f;
   margin: 15px 0;
   line-height: 1.6;
+  font-weight: bolder;
 }
 
 /* Button */

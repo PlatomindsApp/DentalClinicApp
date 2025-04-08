@@ -164,7 +164,7 @@ const StyledWrapper = styled.div`
     gap: 10px; /* Reduced the gap */
     margin-top: 20px;
     flex-wrap: wrap;
-    padding-bottom:10rem;
+    padding-bottom: 10rem;
   }
 
   .plan {
@@ -172,7 +172,7 @@ const StyledWrapper = styled.div`
     box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
     padding: 10px;
     background-color: #fff;
-    color: #697e91;
+    color: #0e264f;
     max-width: 300px;
     flex: 1 1 280px; /* Ensures flexibility and centering */
   }
@@ -180,10 +180,11 @@ const StyledWrapper = styled.div`
   .plan .inner {
     padding: 20px;
     padding-top: 40px;
-    background-color:#fff;
+    background-color: #fff;
     border-radius: 12px;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 `;
 

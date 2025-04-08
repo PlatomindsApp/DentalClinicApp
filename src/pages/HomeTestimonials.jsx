@@ -67,7 +67,7 @@ const ProfileList = () => {
       {/* Heading */}
       <div className="text-center">
         <h1 className="our-services">Testimonial</h1>
-        <h3 className="testimony">Hear from our happy patients about their experiences with our expert dentists.</h3>
+        <h3 className="testimony">Hear from our happy patients.</h3>
       </div>
 
       {/* Carousel */}

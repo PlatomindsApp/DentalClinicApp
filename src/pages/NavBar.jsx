@@ -10,7 +10,9 @@ const mainMenuItems = [
   { to: "/services", label: "Services" },
   { to: "/contact-us", label: "Contact Us" },
   { to: "/find-a-doctor", label: "Find a Doctor" },
-  { to: "/booking", label: "Book an Appointment" }
+  { to: "/blog", label: "Blogs" },
+  { to: "/booking", label: "Book an Appointment" },
+
 ];
 
 export default function NavBar() {

@@ -3,26 +3,26 @@ import "./AppointmentCards.css";
 const cardData = [
   {
     id: 1,
-    date: "24th March 2021",
-    title: "Cras accumsan nulla nec lacus ultricies placerat.",
+    date: "24th March 2025",
+    title: "Dr. Anjali Sharma.",
     description:
-      "Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.",
+      "Providing comprehensive dental care with over 10 years of experience in cosmetic and restorative dentistry.",
     image: "https://marinasidedental.com/wp-content/themes/www.marinasidedental.com/marinaside-dental/files/2023/12/cosmetic-dentistry-to-enhance-your-smile-with-aesthetic-dental-procedures.jpg",
   },
   {
     id: 2,
-    date: "24th March 2021",
-    title: "Dras accumsan nulla nec lacus ultricies placerat.",
+    date: "24th March 2025",
+    title: "Dr. Rakesh Patel",
     description:
-      "Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.",
+      "Providing comprehensive dental care with over 10 years of experience in cosmetic and restorative dentistry.",
     image: "https://marinasidedental.com/wp-content/themes/www.marinasidedental.com/marinaside-dental/files/2023/12/cosmetic-dentistry-to-enhance-your-smile-with-aesthetic-dental-procedures.jpg",
   },
   {
     id: 3,
-    date: "24th March 2021",
-    title: "Seas accumsan nulla nec lacus ultricies placerat.",
+    date: "24th March 2025",
+    title: " Dr. Meena Iyer",
     description:
-      "Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.",
+      "Providing comprehensive dental care with over 10 years of experience in cosmetic and restorative dentistry.",
     image: "https://marinasidedental.com/wp-content/themes/www.marinasidedental.com/marinaside-dental/files/2023/12/cosmetic-dentistry-to-enhance-your-smile-with-aesthetic-dental-procedures.jpg",
   },
 ];
@@ -32,7 +32,7 @@ const AppointmentCards = () => {
     <div className="text-center">
     {/* Heading */}
     <h1 className="our-services">Our Blog</h1>
-    <h3>Our Latest Blog & News</h3>
+    <h3>Our Latest Blogs & News</h3>
     <div className="cards-container">
       {cardData.map((card) => (
         <div className="card" key={card.id}>

@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import AppointmentCards from './AppointmentCards'
 
 function Blog() {
   return (
     <div>
-      <h1>blog</h1>
+      <AppointmentCards/>
     </div>
   )
 }
