@@ -1,40 +1,38 @@
 import "./BookAppointment.css";
-
 const inputFields = [
-  { type: "text", placeholder: "First Name" },
+  { type: "text", placeholder: "Full Name" },
   { type: "email", placeholder: "Email" },
-  { type: "tel", placeholder: "Phone No." },
-  { type: "text", placeholder: "Subject" },
+  { type: "tel", placeholder: "Contact No." },
+  { type: "text", placeholder: "Topic" }
 ];
-
 const contactInfo = [
   {
     icon: "📍",
-    title: "Office Address",
-    text: "Platominds Services Pvt.Ltd, Rajarampuri, Kolhapur, India",
+    title: "Location",
+    text: "Platominds Services Pvt.Ltd, Rajarampuri, Kolhapur, India"
   },
   {
     icon: "⏰",
-    title: "Working Hours",
+    title: "Clinic Hours",
     text: (
       <>
         Monday to Friday 09:00 Am to 05.00 Pm.
         <br />
         Saturday 09:00 Am to 12.00 Pm.
       </>
-    ),
+    )
   },
   {
     icon: "📧",
-    title: "Message Us",
+    title: "Connect With Us",
     text: (
       <>
         Platomindservices@Platominds.com
         <br />
         sayali.pawar@Platominds.com
       </>
-    ),
-  },
+    )
+  }
 ];
 
 const BookAppointment = () => {
@@ -75,5 +73,4 @@ const BookAppointment = () => {
     </div>
   );
 };
-
 export default BookAppointment;

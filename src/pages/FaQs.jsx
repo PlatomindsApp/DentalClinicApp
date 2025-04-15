@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FaqImg from '../assets/FaqImg.jpg';
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -7,17 +8,17 @@ const FAQ = () => {
   };
 
   const faqs = [
-    "Frequently Asked Questions",
-    "Frequently Asked Questions",
-    "Frequently Asked Questions",
-    "Frequently Asked Questions"
+    "We’re Here to Help",
+    "We’re Here to Help",
+    "We’re Here to Help",
+    "We’re Here to Help"
   ];
 
   return (
     <div className="faq-container">
       <div className="faq-content">
-        <h6 className="faq-title">FAQ</h6>
-        <h2 className="faq-heading">Frequently Asked Questions</h2>
+        <h6 className="faq-title">Help & Support</h6>
+        <h2 className="faq-heading">Got Questions</h2>
         <div className="faq-list">
           {faqs.map((question, index) => (
             <div
@@ -44,9 +45,7 @@ const FAQ = () => {
       </div>
       <div className="faq-image">
         <img
-          src={
-            "https://www.wockhardthospitals.com/wp-content/uploads/2023/05/Treatment-Image-16.png"
-          }
+          src={FaqImg}
           alt="Dental Checkup"
         />
       </div>

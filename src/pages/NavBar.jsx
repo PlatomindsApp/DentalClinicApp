@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Nav.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logoImg from "../assets/logoImg.png";
+import logoImg from '../assets/logoImg.jpg';
 // Main menu items
 const mainMenuItems = [
   { to: "/", label: "Home" },
@@ -11,14 +11,13 @@ const mainMenuItems = [
   { to: "/contact-us", label: "Contact Us" },
   { to: "/find-a-doctor", label: "Find a Doctor" },
   { to: "/blog", label: "Blogs" },
-  { to: "/booking", label: "Book an Appointment" },
-
+  { to: "/booking", label: "Book an Appointment" }
 ];
 
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
 
-// Close menu & dropdown after clicking a link
+  // Close menu & dropdown after clicking a link
   const handleNavLinkClick = () => {
     setShowMenu(false);
   };
@@ -29,7 +28,10 @@ export default function NavBar() {
         <div className="grid navbar-grid">
           <div className="logo">
             <span>Dental Clinic</span>
-            <img src={logoImg} alt="Dental Clinic Logo" />
+            <img
+              src={logoImg}
+              alt="Dental Clinic Logo"
+            />
           </div>
 
           {/* Desktop & Mobile Menu */}
@@ -38,18 +40,18 @@ export default function NavBar() {
           >
             <ul>
               {mainMenuItems.map((item, index) => (
-               <li key={index} onClick={handleNavLinkClick}>
-               {item.label === "Book an Appointment" ? (
-                 <NavLink to={item.to}>
-                   <button className="book-appointment-btn">{item.label}</button>
-                 </NavLink>
-               ) : (
-                 <NavLink to={item.to}>{item.label}</NavLink>
-               )}
-             </li>
-             
+                <li key={index} onClick={handleNavLinkClick}>
+                  {item.label === "Book an Appointment" ? (
+                    <NavLink to={item.to}>
+                      <button className="book-appointment-btn">
+                        {item.label}
+                      </button>
+                    </NavLink>
+                  ) : (
+                    <NavLink to={item.to}>{item.label}</NavLink>
+                  )}
+                </li>
               ))}
-
             </ul>
           </nav>
 

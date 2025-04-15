@@ -3,24 +3,28 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HomeTestimonial from '../assets/HomeTestimonial.jpg';
+import HometestimonialImg from '../assets/HometestimonialImg.jpg';
+import HomeTestimony from '../assets/HomeTestimony.jpg';
+
 const testimonials = [
   {
-    img: "https://plus.unsplash.com/premium_photo-1672922646298-3afc6c6397c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlbnRpc3R8ZW58MHx8MHx8fDA%3D",
+    img:HomeTestimonial,
     name: "Eleanor Crisp",
     role: "About Dr.Eleanor Crisp",
     quote: "Exceptional care and expertise! The dentists here are truly professionals who ensure a comfortable and pain-free experience. Highly recommended!",
   },
   {
-    img: "https://media.istockphoto.com/id/1680805041/photo/beautiful-indian-looking-nepali-dentist-doctor-girl-smiling-and-giving-gestures.webp?a=1&b=1&s=612x612&w=0&k=20&c=nGK0NSODhVl0huJVWPmY9hm-VDI4Zox5QCmn--y9BU0=",
+    img: HometestimonialImg,
     name: "Gordon Norman",
     role: "About Dr.Gordon Norman",
     quote: "From consultation to treatment, the process was seamless. The team is highly skilled, and their attention to detail is unmatched.",
   },
   {
-    img: "https://media.istockphoto.com/id/1455851883/photo/dental-procedure-with-the-help-of-3d-tooth-scanner-technology.jpg?s=612x612&w=0&k=20&c=aZxnffoQ9pc3Hzpcbd_-glBoXvABAGnYrFQcJsqKpH0=",
+    img: HomeTestimony,
     name: "Sue Shei",
     role: "About Dr.Sue Shei",
-    quote: "A top-notch dental clinic with state-of-the-art equipment and a caring staff. I felt at ease throughout my treatment.",
+    quote:  "From consultation to treatment, the process was seamless. The team is highly skilled, and their attention to detail is unmatched.",
   },
 ];
 

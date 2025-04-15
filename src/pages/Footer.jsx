@@ -1,5 +1,6 @@
 import "./Footer.css";
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome
+// import logoImg from '../assets/logoImg.jpg';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 const Footer = () => {
   const otherLinks = [
     "Home",
@@ -31,8 +32,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        
         <div className="footer-logo">
-          <h2>Dental clinic.</h2>
+          <h2>Dental Clinic</h2>
           <p>Kolhapur-Maharashtra-India, Kolhapur-Maharashtra-India,</p>
           <p>🕒 Monday - Saturday: 9:00am - 10:00pm</p>
         </div>
@@ -49,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-services">
-          <h3>Our Services</h3>
+          <h3>Modern Solutions for a Healthier Smile</h3>
           <ul>
             {services.map((service, index) => (
               <li key={index}>
@@ -79,7 +81,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright © 2023 Decare. All rights reserved.</p>
+        <p>Copyright © 2023 Dental Clinic All rights reserved.</p>
       </div>
     </footer>
   );

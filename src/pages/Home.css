@@ -1,23 +1,21 @@
-/* ✅ Background Container */
+/*  Background Container */
 .background-container {
   position: relative;
   width: 100%;
   height: 80vh;
-  /* Dynamic height */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* ✅ Background Image */
+/*  Background Image */
 .background-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
   border-radius: 15px;
-  /* Optional: adds rounded corners to the image */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +25,7 @@
   opacity: 0.9;
 }
 
-/* ✅ Overlay Content (Text & Button) */
+/*  Overlay Content (Text & Button) */
 .overlay-content {
   position: absolute;
   text-align: center;
@@ -41,14 +39,14 @@
   transform: translateY(10%);
 }
 
-/* ✅ Hero Text - Fully Responsive */
+/*  Hero Text - Fully Responsive */
 .hero-text {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ✅ Contact Us Button */
+/*  Contact Us Button */
 .contact-us-btn {
   padding: 12px 24px;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
@@ -66,7 +64,7 @@
   transform: scale(1.05);
 }
 
-/* ✅ Responsive Adjustments */
+/*  Responsive Adjustments */
 @media (max-width: 1024px) {
   .overlay-content {
     transform: translateY(5%);
@@ -95,7 +93,7 @@
   }
 }
 
-/* ✅ Text Section */
+/*  Text Section */
 .text-container {
   display: flex;
   flex-direction: column;
@@ -106,21 +104,15 @@
   text-align: center;
 }
 
-/* ✅ Heading */
+/*  Heading */
 .our-services {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   color: #007BFF;
   margin-bottom: 1rem;
 }
 
-/* ✅ Paragraph */
+/*  Paragraph */
 p {
-  /* font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: #0e264f;
-  max-width: 55%;
-  line-height: 1.6;
-  font-family: "Poppins", sans-serif; */
-
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   /* Adjusted clamp values for better readability */
   color: #0e264f;
@@ -131,7 +123,7 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
-/* ✅ Responsive Text Adjustments */
+/*  Responsive Text Adjustments */
 @media (max-width: 1280px) {
   p {
     max-width: 100%;
@@ -340,13 +332,9 @@ h2 {
 .slick-dots li button:before {
   color: #007bff !important;
 }
-
 .slick-dots li.slick-active button:before {
   color: #0056b3 !important;
 }
-
-/* Carousel css  */
-/* Center the carousel and remove unwanted scrolling */
 .carousel-wrapper {
   max-width: 80%;
   margin: auto;
@@ -362,30 +350,21 @@ h2 {
   color: #0e264f;
   /* Color for heading */
   word-wrap: break-word;
-  /* Allow the heading to wrap if needed */
   white-space: normal;
-  /* Allow heading to break into multiple lines */
   height: auto;
 }
-
-/*
-}
-
 /* Card styling */
 .carouselCard {
   width: 100%;
   max-width: 300px;
   height: auto;
-  /* Allow height to adjust based on content */
   border-radius: 15px;
   background: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  /* Stack content vertically */
   align-items: center;
   justify-content: space-between;
-  /* Distribute space between heading and paragraph */
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -680,7 +659,7 @@ h2 {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #3a6ea5;
+  color: #ffffff;
 }
 
 .faq-heading {
@@ -752,7 +731,7 @@ h2 {
   object-fit: cover;
 }
 
-/* ✅ Responsive Design */
+/*  Responsive Design */
 @media (max-width: 1024px) {
   .faq-container {
     flex-direction: column;

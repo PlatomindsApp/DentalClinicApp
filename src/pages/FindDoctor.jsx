@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import styled from 'styled-components';
-
 const doctorsData = [
   { id: 1, name: 'Dr. Anjali Sharma', specialty: 'Dentist', location: 'Mumbai' },
   { id: 2, name: 'Dr. Rakesh Patel', specialty: 'Cardiologist', location: 'Ahmedabad' },

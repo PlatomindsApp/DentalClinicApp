@@ -1,3 +1,4 @@
+import BookappImg from '../assets/BookappImg.jpg'
 import "./AppointmentSection.css";
 const appointmentData = {
   title: "Committed to Your Dental Health ",
@@ -5,7 +6,6 @@ const appointmentData = {
   buttonText: "Book an Appointment!",
   imageUrl: "/path-to-your-image.jpg"
 };
-
 const AppointmentSection = () => {
   return (
     <div className="appointment-container">
@@ -18,9 +18,7 @@ const AppointmentSection = () => {
       </div>
       <div className="appointment-image">
         <img
-          src={
-            "https://marinasidedental.com/wp-content/themes/www.marinasidedental.com/marinaside-dental/files/2023/12/cosmetic-dentistry-to-enhance-your-smile-with-aesthetic-dental-procedures.jpg"
-          }
+          src={BookappImg}
           alt="Dentist"
         />
       </div>

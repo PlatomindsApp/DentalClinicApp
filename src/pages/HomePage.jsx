@@ -8,17 +8,21 @@ import Testimonials from "./HomeTestimonials";
 import PlanCards from "./HomePlanCards";
 import FAQ from "./FaQs";
 import CustomCarousel from "./HomeCarousel";
-
+import HomebgImg from '../assets/HomebgImg.jpg';
 function HomePage() {
   return (
     <>
       <div className="background-container">
-        <img src={'https://www.teethtalkgirl.com/static/6d4c97ad123c7984d7190df486bcc278/9cfba/Adobe_Stock_430458625_6b0bbcc6b9.webp'} alt="Background" className="background-img" />
+        <img
+          src={HomebgImg}
+          alt="Background"
+          className="background-img"
+        />
 
         {/* Overlay Content for Text & Button */}
         <div className="overlay-content">
           <strong className="hero-text">
-            We provide the best solutions for dental appointments.
+            Effortless Dental Appointments, Exceptional Care
           </strong>
 
           {/* Contact Us Button */}
@@ -26,7 +30,7 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Our services section */}
+      {/* Modern Solutions for a Healthier Smile section */}
       <TextSection />
       {/* About us section  */}
       <AboutTextSection />
@@ -37,9 +41,9 @@ function HomePage() {
       {/* Plan cards  */}
       <PlanCards />
       {/* FAQ */}
-      <FAQ/>
+      <FAQ />
       {/* CustomCarousel  */}
-      <CustomCarousel/>
+      <CustomCarousel />
     </>
   );
 }

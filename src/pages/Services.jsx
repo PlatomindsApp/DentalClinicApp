@@ -3,6 +3,7 @@ import "./Service.css";
 import EnquiryForm from "./HomeEnquirySection";
 import ProfileList from "./HomeTestimonials";
 import PlanCards from "./HomePlanCards";
+import AboutImg from '../assets/AboutImg.jpg';
 
 const services = [
   {
@@ -46,10 +47,10 @@ const services = [
 const ServicesCards = () => {
   return (
     <><div className="about-container">
-      <img src={'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/mnl6qGkxVKFMG0QN/blue-simple-love-your-teeth-instagram-post-1500-x-1080-piksel-azerice-1-AQE4wZ2xQZhg4lLQ.jpg'} alt="About Us" className="about-image" />
+      <img src={AboutImg} alt="About Us" className="about-image" />
       <div className="about-text">
-        <h1>Services</h1>
-        <h2>Home | Services</h2>
+        <h1>Dental Services</h1>
+        <h2>Home | Dental Services</h2>
       </div>
     </div><div className="services-container">
         {services.map((service) => (

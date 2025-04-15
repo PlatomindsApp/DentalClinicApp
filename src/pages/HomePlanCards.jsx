@@ -62,8 +62,8 @@ const PlanCards = () => {
   return (
     <StyledWrapper>
       <div className="text-center">
-        <h1 className="our-services">Our Plans</h1>
-        {/* <h3>What We Provide</h3> */}
+        <h1 className="our-services">Subscribe To Our Plans</h1>
+        {/* <h3>From Toothache to Treatment—Faster Than Ever</h3> */}
       </div>
       <div className="plan-container">
         {/* Basic Plan Card */}
@@ -75,6 +75,9 @@ const PlanCards = () => {
               </span>
             </span>
             <p className="title">Basic Plan</p>
+            <p className="title"> <span>
+                $19 <small>/ m</small>
+              </span></p>
             <p className="info">
               This plan is suitable for small teams and businesses just getting
               started.
@@ -89,7 +92,7 @@ const PlanCards = () => {
             </ul>
             <div className="action">
               <a className="button" href="#">
-                Choose plan
+                Pick a Plan
               </a>
             </div>
           </div>
@@ -104,6 +107,10 @@ const PlanCards = () => {
               </span>
             </span>
             <p className="title">Standard Plan</p>
+            <p className="title"><span>
+                $49 <small>/ m</small>
+              </span></p>
+
             <p className="info">
               Ideal for growing teams that need more features and collaboration
               tools.
@@ -118,7 +125,7 @@ const PlanCards = () => {
             </ul>
             <div className="action">
               <a className="button" href="#">
-                Choose plan
+                Pick a Plan
               </a>
             </div>
           </div>
@@ -133,6 +140,10 @@ const PlanCards = () => {
               </span>
             </span>
             <p className="title">Unlimited Plan</p>
+            <p className="title"><span>
+                $99 <small>/ m</small>
+              </span></p>
+
             <p className="info">
               The perfect plan for large teams with unlimited access to all
               features.
@@ -147,7 +158,7 @@ const PlanCards = () => {
             </ul>
             <div className="action">
               <a className="button" href="#">
-                Choose plan
+                Pick a Plan
               </a>
             </div>
           </div>

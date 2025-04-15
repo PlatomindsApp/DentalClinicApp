@@ -37,10 +37,10 @@ const TextSection = () => {
   return (
     <>
       <div className="text-center">
-        <h1 className="our-services">Our Services</h1>
-        <h3>What We Provide</h3>
+        <h1 className="our-services">Modern Solutions for a Healthier Smile</h1>
+        <h3>From Toothache to Treatment—Faster Than Ever</h3>
       </div>
-      <Carousel/>
+      <Carousel />
     </>
   );
 };

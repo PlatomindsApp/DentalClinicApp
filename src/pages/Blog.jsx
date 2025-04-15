@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
 import AppointmentCards from './AppointmentCards'
-
 function Blog() {
   return (
     <div>
@@ -9,5 +6,4 @@ function Blog() {
     </div>
   )
 }
-
 export default Blog
